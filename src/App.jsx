@@ -3,14 +3,12 @@ import "./styles/main.css";
 // import LoginForm from "./components/login_form";
 import LandingForm from "./components/landing_form";
 import featureImg from './assets/loginpageimage.png';
+import logo from './assets/ansoftt_pos.png';
 import { useWindowDimensions } from './components/utils.js';
 
 function App() {
 
-  // let width = 1000;
-
   const [width, setWidth] = useState(1000);
-
 
   useEffect(() => {
     // width = useWindowDimensions();
@@ -23,6 +21,28 @@ function App() {
 
     script.async = true
   }, [width]);
+
+  const [dimensions, setDimensions] = React.useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
+
+  React.useEffect(() => {
+    function handleResize() {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      })
+
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    return _ => {
+      window.removeEventListener('resize', handleResize)
+
+    }
+  })
 
 
 
@@ -51,21 +71,49 @@ function App() {
     width: '180vh',
   };
 
+  const mobFormAlign = {
+    alignItems: 'center',
+    // justifyContent: 'center',
+    width: '58vh',
+  };
+
+  const mobileCoverDiv = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    height: '100vh',
+    width: '60vh',
+  };
+
+  const mobImgStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '7vh',
+    width: '40vh',
+    marginBottom: '20px'
+  };
+
   return (
     <>
-      {width > 700 ?
+      {dimensions.width > 600 ?
         (<div style={coverDiv}>
-          {/* <div><p>More than 600</p></div> */}
-
 
           <img style={imgStyle} src={featureImg} alt={'Feature'} />
 
           <div style={formStyle}>
             <LandingForm />
           </div>
+          <div>Rendered at {dimensions.width} x {dimensions.height}</div>
 
+        </div>) : (<div style={mobileCoverDiv}>
+          <img style={mobImgStyle} src={logo} alt={'Feature'} />
+          <div style={mobFormAlign}>
+            <LandingForm />
+          </div>
 
-        </div>) : (<div><p>More than 600</p></div>)}
+        </div>)}
     </>
   );
 }

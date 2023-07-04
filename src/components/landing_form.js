@@ -215,7 +215,7 @@ style='background-color: white;color: black;max-width: 900px;width: 500px;'>
             }
         }
     </style>
-    <div class='zcwf_title' style='max-width: 900px;color: black; font-family:Arial;'>Get in touch</div>
+    <div class='zcwf_title' style='max-width: 900px;color: black; font-family:Arial;text-align:center'>Get in touch</div>
     <div class='zcwf_row'>
         <!-- <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'><label for='First_Name'>First
                 Name</label></div> -->
