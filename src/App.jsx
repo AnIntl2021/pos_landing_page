@@ -80,7 +80,7 @@ function App() {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    height: '100vh',
+    // height: '00vh',
     width: '60vh',
   };
 
@@ -88,9 +88,10 @@ function App() {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '7vh',
-    width: '40vh',
-    marginBottom: '20px'
+    height: '60vh',
+    width: '50vh',
+    marginBottom: '20px',
+    marginTop: '20px'
   };
 
   return (
@@ -106,7 +107,7 @@ function App() {
           <div>Rendered at {dimensions.width} x {dimensions.height}</div>
 
         </div>) : (<div style={mobileCoverDiv}>
-          <img style={mobImgStyle} src={logo} alt={'Feature'} />
+          <img style={mobImgStyle} src={featureImg} alt={'Feature'} />
           <div style={mobFormAlign}>
             <LandingForm />
           </div>
