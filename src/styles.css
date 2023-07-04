@@ -26,3 +26,8 @@ body {
     background-color: #FF932E !important;
     border-color: #FF932E !important;
 }
+
+.child-container {
+    height: 100px;
+    width: 100px;
+}
