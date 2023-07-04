@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react"
 import "./styles/main.css";
-// import LoginForm from "./components/login_form";
 import LandingForm from "./components/landing_form";
 import featureImg from './assets/loginpageimage.png';
 import logo from './assets/ansoftt_pos.png';
-import { useWindowDimensions } from './components/utils.js';
 
 function App() {
 
   const [width, setWidth] = useState(1000);
 
   useEffect(() => {
-    // width = useWindowDimensions();
+
     setWidth(window.innerWidth);
     console.log('width: ', width);
     const script = document.createElement("script")
