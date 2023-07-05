@@ -101,7 +101,8 @@ function App() {
   };
 
   const marginBox = {
-    width: '20vh'
+    display: 'flex',
+    width: '20px'
   };
 
   return (
