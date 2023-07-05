@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 // import landing_page from '../assets/landing_page_code.js';
 
 const landing_page = `<div id='crmWebToEntityForm' class='zcwf_lblTopBottom crmWebToEntityForm'
@@ -378,6 +378,9 @@ style='background-color: white;color: black;max-width: 900px; width: 500px;'>
     <!-- Do not remove this --- Analytics Tracking code ends. -->
 </form>
 </div>`;
+
+
+
 
 // const landing_page3 = `<div id='crmWebToEntityForm' class='zcwf_lblTopBottom crmWebToEntityForm'
 // style='background-color: white;color: black;max-width: 900px;width: 500px;'>

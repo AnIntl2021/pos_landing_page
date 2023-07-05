@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
 import "./styles/main.css";
 import LandingForm from "./components/landing_form";
-import featureImg from './assets/loginpageimage.png';
-import logo from './assets/ansoftt_pos.png';
+import LandingFormMob from "./components/landing_form_mob";
+import featureImg from './assets/feature_img.png';
+import mobPic from './assets/feature_img_mob.png';
 
 function App() {
 
@@ -50,7 +51,7 @@ function App() {
     justifyContent: 'center',
     flexDirection: 'row',
     height: '100vh',
-    width: '200vh',
+    width: '160vh',
   };
 
   const imgStyle = {
@@ -71,8 +72,10 @@ function App() {
 
   const mobFormAlign = {
     alignItems: 'center',
-    // justifyContent: 'center',
-    width: '58vh',
+    justifyContent: 'center',
+    width: '50vh',
+    maring: '0px 10px'
+    // marginRight: '10px'
   };
 
   const mobileCoverDiv = {
@@ -81,17 +84,24 @@ function App() {
     justifyContent: 'center',
     flexDirection: 'column',
     // height: '00vh',
-    width: '60vh',
+    width: '40vh',
+    padding: '2rem'
   };
 
   const mobImgStyle = {
     display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     height: '60vh',
-    width: '50vh',
+    width: '420px',
+    // padding: '0rem -0.15rem',
+    marginLeft: '90px',
     marginBottom: '20px',
     marginTop: '20px'
+  };
+
+  const marginBox = {
+    width: '20vh'
   };
 
   return (
@@ -100,16 +110,15 @@ function App() {
         (<div style={coverDiv}>
 
           <img style={imgStyle} src={featureImg} alt={'Feature'} />
-
+          <div style={marginBox}></div>
           <div style={formStyle}>
             <LandingForm />
           </div>
-          <div>Rendered at {dimensions.width} x {dimensions.height}</div>
 
         </div>) : (<div style={mobileCoverDiv}>
-          <img style={mobImgStyle} src={featureImg} alt={'Feature'} />
+          <img style={mobImgStyle} src={mobPic} alt={'Feature'} />
           <div style={mobFormAlign}>
-            <LandingForm />
+            <LandingFormMob />
           </div>
 
         </div>)}
